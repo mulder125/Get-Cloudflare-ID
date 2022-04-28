@@ -40,13 +40,9 @@ with open('res.txt', 'r', encoding="utf-8") as rjf:
 clist=jdata["result"]
 #將clist的Record ID+域名儲存到cf_id.txt
 
-f = open("cf_id.txt", 'w')
-f.write('CF Gobal KEY  :  ')
-f.write(G_Key)
-#f.close()
-
 with open("cf_id.txt", "w", encoding="utf-8") as cdid:
-#cdid.write("Gobal KEY : ")   
+    cdid.write("Gobal KEY : " + G_Key + "\n" )
+    print("Gobal KEY : ", G_Key)    
     for lis in clist:
-        cdid.write(lis["id"] + " : " + lis["type"] + "\t" +" : "+ lis["name"] + "\n")
-        print(lis["id"], ":", lis["type"], "\t", lis["name"])
+        cdid.write(lis["name"].ljust(25) + "ID : " + lis["id"].ljust(36) + "TYPE : " + lis["type"] + "\n")
+        print(lis["name"].ljust(25), "ID : ", lis["id"].ljust(36), "TYPE : ", lis["type"].ljust(8) )
