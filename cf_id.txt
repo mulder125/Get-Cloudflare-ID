@@ -1,11 +1,16 @@
-47ee7044abb07ead2e49c327f027822f : g6400.mulder.buzz
-e0e7d3d0e5e8e18eb19fac360e5a1fc2 : i3965.mulder.buzz
-09c18fec4f1e7ff4b1bd05bf0884bf57 : j4125.mulder.buzz
-5f88bf88f1b5e9c2099f6fc46926822e : j4125-ub2.mulder.buzz
-60391d8679f31c0463680624e859dc1d : j4125-ub.mulder.buzz
-e0b3fdb55f04e42013f49b839f974269 : mulder.buzz
-1273a8c84d61db065637ee64b6195b9b : z16.mulder.buzz
-38a23fd255a83e1909576fb9da7455e1 : j4125.mulder.buzz
-7c7861da4968f410174adf3bcd84e96d : j4125-ub2.mulder.buzz
-4283e4cda1c55f2ac59a68d08bc23e60 : j4125-ub.mulder.buzz
-8fc46bacfb26207429a35cd7a04907d4 : z16.mulder.buzz
+CF Gobal KEY  :  dfcc91f325a21396e410eca8e04468a82e016
+c3d761658f72039d8951bc310d049137 : A	 : bw.mulder.buzz
+47ee7044abb07ead2e49c327f027822f : A	 : g6400.mulder.buzz
+1cba89325dee04adeb1e87b8161fc426 : A	 : hd.mulder.buzz
+e0e7d3d0e5e8e18eb19fac360e5a1fc2 : A	 : i3965.mulder.buzz
+09c18fec4f1e7ff4b1bd05bf0884bf57 : A	 : j4125.mulder.buzz
+5f88bf88f1b5e9c2099f6fc46926822e : A	 : j4125-ub2.mulder.buzz
+8815a91da6ef5e3deba82f58093816e9 : A	 : j4125-ub.mulder.buzz
+e0b3fdb55f04e42013f49b839f974269 : A	 : mulder.buzz
+4e2ed692257ff3139390d2c71a52e9d8 : A	 : orc.mulder.buzz
+d22cd18787e196c988ad5f04a2e6734f : A	 : pr.mulder.buzz
+1273a8c84d61db065637ee64b6195b9b : A	 : z16.mulder.buzz
+731958be589b2d68714abfd9a9b77d3c : AAAA	 : j4125-dsm.mulder.buzz
+38a23fd255a83e1909576fb9da7455e1 : AAAA	 : j4125.mulder.buzz
+f4af65c9d3641925ef678681caad06be : AAAA	 : j4125-w11.mulder.buzz
+5e6c760f52313c33cbb7f44389e9b421 : AAAA	 : orcv6.mulder.buzz
