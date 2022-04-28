@@ -10,7 +10,7 @@ G_Key = config_array['G_Key']
 ctype = config_array['ctype']
 Zone_id = config_array['Zone_id']
 cfurl = config_array["url"]
-#以下for參數debug
+#以下參數for debug
 #print(config_array['Email'])
 #print(config_array['G_Key'])
 #print(config_array['ctype'])
