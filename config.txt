@@ -1,0 +1,7 @@
+{
+	"url": "https://api.cloudflare.com/client/v4/zones/",
+	"Email": "mulder125@gmail.com",
+	"G_Key": "dfcc91f325a21396e410eca8e04468a82e016",
+	"ctype": "application/json",
+	"Zone_id": "bb73f29894e6a00b348b6d04239c6a20"
+}
