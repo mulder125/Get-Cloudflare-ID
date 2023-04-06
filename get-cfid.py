@@ -40,20 +40,17 @@ res = requests.get(url, headers=headers)
 #print(config_array['Email'])
 #print(config_array['G_Key'])
 #print(config_array['ctype'])
-#print(config_array['Zone_id'])
+#print(config_array['zone_id'])
 #print(url)
 #print(headers)
 
-#結果存到data.json
-with open("res.txt", "w", encoding="utf-8") as wjf:
-    wjf.write(res.text)
-
-#讀出data.json到data    
-with open('res.txt', 'r', encoding="utf-8") as rjf:
-    jdata = json.load(rjf)
+#結果存到res.txt (json格式)
+#with open("res.txt", "w", encoding="utf-8") as wjf:
+#    wjf.write(res.text)
 
 #篩出result後方資料到clist   
-clist=jdata["result"]
+data = res.json()
+clist=data["result"]
 
 #將clist的Record ID+域名儲存到cf_id.txt
 with open("cf_id.txt", "w", encoding="utf-8") as cdid:
