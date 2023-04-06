@@ -5,21 +5,36 @@ import json
 with open('config.txt', 'r', encoding="utf-8") as rcfg:
     config_array = json.load(rcfg)
 
-#讀出各參數
-Email = config_array['Email']
-G_Key = config_array['G_Key']
-ctype = config_array['ctype']
-Zone_id = config_array['Zone_id']
-cfurl = config_array["url"]
+# Cloudflare API账户信息
+email = config_array['Email']
+api_key = config_array['G_Key']
+zone_name = config_array['domain']  # 要获取 Zone ID 的域名
 
-#url部分
-url = cfurl + Zone_id + '/dns_records'
-#headers部分
+# 发起 API 请求获取 Zone ID
+url = f"https://api.cloudflare.com/client/v4/zones?name={zone_name}"
 headers = {
-    'x-auth-email': Email,
-    'x-auth-key': G_Key,
-    'content-type': ctype,
+    "Content-Type": "application/json",
+    "X-Auth-Email": email,
+    "X-Auth-Key": api_key,
 }
+response = requests.get(url, headers=headers)
+data = response.json()
+
+if response.status_code == 200 and data["success"]:
+    zone_id = data["result"][0]["id"]
+    print(f"Zone ID for '{zone_name}' is: {zone_id}")
+else:
+    print("Failed to get Zone ID:", data["errors"])
+
+# 发起 API 请求获取所有 DNS 记录
+url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
+headers = {
+    "Content-Type": "application/json",
+    "X-Auth-Email": email,
+    "X-Auth-Key": api_key,
+}
+
+res = requests.get(url, headers=headers)
 
 #顯示參數 for debug
 #print(config_array['Email'])
@@ -28,9 +43,6 @@ headers = {
 #print(config_array['Zone_id'])
 #print(url)
 #print(headers)
-
-#Get Record ID 主程式 (curl -X GET url+headers)
-res=requests.get(url=url, headers=headers)
 
 #結果存到data.json
 with open("res.txt", "w", encoding="utf-8") as wjf:
@@ -45,8 +57,10 @@ clist=jdata["result"]
 
 #將clist的Record ID+域名儲存到cf_id.txt
 with open("cf_id.txt", "w", encoding="utf-8") as cdid:
-    cdid.write("Gobal KEY : " + G_Key + "\n" )
-    print("Gobal KEY : ", G_Key)    
+    cdid.write("Domain : " + zone_name + "\n" )    
+    cdid.write("Zone ID : " + zone_id + "\n" ) 
+#    print("Domain : ", zone_name) 
+#    print("Zone ID : ", zone_id)         
     for lis in clist:
         cdid.write(lis["name"].ljust(25) + "ID : " + lis["id"].ljust(36) + "TYPE : " + lis["type"] + "\n")
         print(lis["name"].ljust(25), "ID : ", lis["id"].ljust(36), "TYPE : ", lis["type"].ljust(8) )
