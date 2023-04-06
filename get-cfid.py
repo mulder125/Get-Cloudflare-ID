@@ -20,6 +20,7 @@ headers = {
 response = requests.get(url, headers=headers)
 data = response.json()
 
+#從data中抓出Zone ID 存到 zone_id
 if response.status_code == 200 and data["success"]:
     zone_id = data["result"][0]["id"]
     print(f"Zone ID for '{zone_name}' is: {zone_id}")
