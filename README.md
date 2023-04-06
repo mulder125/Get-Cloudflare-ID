@@ -11,3 +11,6 @@ Get CF ID
 	"G_Key": "xxxxxxxxxxxxxxxxxxxxxxx",
 	"domain": "aaa.bbb"
 }
+
+
+運行方式: python get-cfid.py
