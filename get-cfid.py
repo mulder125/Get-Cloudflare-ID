@@ -60,5 +60,5 @@ with open("cf_id.txt", "w", encoding="utf-8") as cdid:
 #    print("Domain : ", zone_name) 
 #    print("Zone ID : ", zone_id)         
     for lis in clist:
-        cdid.write(lis["name"].ljust(25) + "ID : " + lis["id"].ljust(36) + "TYPE : " + lis["type"] + "\n")
-        print(lis["name"].ljust(25), "ID : ", lis["id"].ljust(36), "TYPE : ", lis["type"].ljust(8) )
+        cdid.write(lis["name"].ljust(32) + "ID : " + lis["id"].ljust(36) + "TYPE : " + lis["type"] + "\n")
+        print(lis["name"].ljust(32), "ID : ", lis["id"].ljust(36), "TYPE : ", lis["type"].ljust(8) )
