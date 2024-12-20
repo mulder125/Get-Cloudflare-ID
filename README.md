@@ -7,12 +7,6 @@ Get CF ID
 以下為範例
 
 {
-	"Email": "aaa@bbb.ccc",
-	"G_Key": "xxxxxxxxxxxxxxxxxxxxxxx",
-	"domain": "aaa.bbb"
-}
-
-{
     "Email": "aaa@bbb.ccc",
     "G_Key": "xxxxxxxxxxxxxxxxxxxxxxx",
     "domains": [
