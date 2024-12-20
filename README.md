@@ -12,5 +12,13 @@ Get CF ID
 	"domain": "aaa.bbb"
 }
 
+{
+    "Email": "aaa@bbb.ccc",
+    "G_Key": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "domains": [
+    	"spwvpn.com",
+     	"gecs.top"
+    ]
+}
 
 運行方式: python get-cfid.py
