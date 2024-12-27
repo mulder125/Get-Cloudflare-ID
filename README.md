@@ -10,8 +10,8 @@ Get CF ID
     "Email": "aaa@bbb.ccc",
     "G_Key": "xxxxxxxxxxxxxxxxxxxxxxx",
     "domains": [
-    	"spwvpn.com",
-     	"gecs.top"
+    	"ss.com",
+     	"gg.top"
     ]
 }
 
